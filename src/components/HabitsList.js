@@ -4,11 +4,13 @@ export default function HabitsList() {
   return (
     <div>
       <h2>Habits</h2>
-      <Habit />
-      <Habit />
-      <Habit />
+      <div className="habits-list">
+        <Habit />
+        <Habit />
+        <Habit />
+      </div>
 
-      <button>Add new habit</button>
+      <button className="button">Add new habit</button>
     </div>
   );
 }

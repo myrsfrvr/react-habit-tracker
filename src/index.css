@@ -33,15 +33,45 @@ body {
 .flex {
   display: flex;
   gap: 2rem;
+  margin: 0 8rem;
 }
 
 .sidebar {
   width: 40rem;
-  background-color: blue;
+}
+
+.sidebar h2 {
+  margin-bottom: 2rem;
 }
 
 .habit {
-  background-color: coral;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1rem;
+  border: 1px solid #555;
+  border-radius: 2px;
+  margin-bottom: 0.8rem;
+}
+
+.habit div {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.button {
+  background-color: #2165e4;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  padding: 0.8rem 1.5rem;
+  border-radius: 3px;
+  margin-bottom: 1.5rem;
+
+  margin-left: auto;
+  display: block;
 }
 
 .form-add-habit {
