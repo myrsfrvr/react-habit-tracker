@@ -106,12 +106,53 @@ body {
   flex-direction: column;
   gap: 1rem;
   width: 70rem;
-  background-color: aqua;
 }
 
 .track-habit {
-  display: flex;
-  gap: 2rem;
+  /* display: flex; */
+  /* gap: 2rem; */
+  padding: 1rem;
+  border: 1px solid #555;
+  border-radius: 3px;
+}
 
-  background-color: cornflowerblue;
+.habit-description {
+  margin-bottom: 0.8rem;
+}
+
+.habit-description span {
+  font-weight: 600;
+}
+
+.days,
+.check-list {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 1fr;
+  justify-items: center;
+}
+
+.days {
+  margin-bottom: 0.8rem;
+}
+
+.check-list {
+  /* padding: 0 0.5rem; */
+}
+
+.icon {
+  font-size: 2.2rem;
+  cursor: pointer;
+}
+
+.icon-empty {
+  color: #2165e4;
+}
+
+.icon-x {
+  color: #e31010;
+}
+
+.icon-check {
+  color: #0cc12a;
 }
