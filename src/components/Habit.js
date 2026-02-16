@@ -8,7 +8,7 @@ export default function Habit() {
         <LuLeaf />
         <p>early bird</p>
       </div>
-      <LuTrash2 />
+      <LuTrash2 className="icon-trash" />
     </div>
   );
 }

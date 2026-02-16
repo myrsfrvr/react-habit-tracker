@@ -9,8 +9,6 @@ export default function HabitsList() {
         <Habit />
         <Habit />
       </div>
-
-      <button className="button">Add new habit</button>
     </div>
   );
 }

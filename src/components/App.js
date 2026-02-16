@@ -10,7 +10,9 @@ export default function App() {
       <div className="flex">
         <div className="sidebar">
           <HabitsList />
+
           <AddHabit />
+          <button className="button">Add new habit</button>
         </div>
         <TrackHabitsList />
       </div>
