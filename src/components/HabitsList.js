@@ -2,9 +2,9 @@ import Habit from './Habit';
 
 export default function HabitsList() {
   return (
-    <div>
+    <div className="habits-list">
       <h2>Habits</h2>
-      <div className="habits-list">
+      <div className="habits">
         <Habit />
         <Habit />
         <Habit />

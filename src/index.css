@@ -44,6 +44,10 @@ body {
   margin-bottom: 2rem;
 }
 
+.habits-list {
+  margin-bottom: 1.5rem;
+}
+
 .habit {
   display: flex;
   align-items: center;
@@ -68,18 +72,33 @@ body {
   font-weight: 600;
   padding: 0.8rem 1.5rem;
   border-radius: 3px;
-  margin-bottom: 1.5rem;
 
   margin-left: auto;
   display: block;
+
+  transition: all 0.3s;
+}
+
+.button:hover,
+.button:active {
+  background-color: #417be7;
+}
+
+.button--add {
+  grid-column-start: 2;
+  grid-column-end: -1;
 }
 
 .form-add-habit {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  align-items: center;
   gap: 1rem;
-  background-color: crimson;
+
+  border-radius: 3px;
+  border: 1px solid #555;
+  padding: 1rem 2rem;
 }
 
 .track-list {

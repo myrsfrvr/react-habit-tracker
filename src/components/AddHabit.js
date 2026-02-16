@@ -6,6 +6,8 @@ export default function AddHabit() {
 
       <label>Habit description</label>
       <input type="text"></input>
+
+      <button className="button button--add">Add habit</button>
     </form>
   );
 }
