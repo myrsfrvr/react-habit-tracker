@@ -89,6 +89,12 @@ body {
   grid-column-end: -1;
 }
 
+.button-delete {
+  border: none;
+  background-color: #fff;
+  font-size: 1.6rem;
+}
+
 .form-add-habit {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
