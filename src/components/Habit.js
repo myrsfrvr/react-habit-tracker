@@ -1,14 +1,16 @@
 import { LuLeaf } from 'react-icons/lu';
 import { LuTrash2 } from 'react-icons/lu';
 
-export default function Habit({ title }) {
+export default function Habit({ habit, onDeleteHabit }) {
   return (
     <div className="habit">
       <div>
         <LuLeaf />
-        <p>{title}</p>
+        <p>{habit.title}</p>
       </div>
-      <LuTrash2 className="icon-trash" />
+      <button className="button-delete" onClick={() => onDeleteHabit(habit.id)}>
+        <LuTrash2 className="icon-trash" />
+      </button>
     </div>
   );
 }

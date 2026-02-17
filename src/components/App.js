@@ -29,12 +29,18 @@ export default function App() {
   const [habits, setHabits] = useState(initialHabits);
   const [showAddHabit, setShowAddHabit] = useState(false);
 
+  function handleDeleteHabit(id) {
+    setHabits(habits => habits.filter(habit => habit.id !== id));
+  }
+
+  function handleAddHabit() {}
+
   return (
     <div className="container">
       <Logo />
       <div className="flex">
         <div className="sidebar">
-          <HabitsList habits={habits} />
+          <HabitsList habits={habits} onDeleteHabit={handleDeleteHabit} />
           {showAddHabit && <AddHabit />}
           <button
             className="button"
