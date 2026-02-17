@@ -33,7 +33,10 @@ export default function App() {
     setHabits(habits => habits.filter(habit => habit.id !== id));
   }
 
-  function handleAddHabit() {}
+  function handleAddHabit(habit) {
+    setHabits(habits => [...habits, habit]);
+    setShowAddHabit(false);
+  }
 
   return (
     <div className="container">
@@ -41,7 +44,7 @@ export default function App() {
       <div className="flex">
         <div className="sidebar">
           <HabitsList habits={habits} onDeleteHabit={handleDeleteHabit} />
-          {showAddHabit && <AddHabit />}
+          {showAddHabit && <AddHabit onAddHabit={handleAddHabit} />}
           <button
             className="button"
             onClick={() => setShowAddHabit(!showAddHabit)}
