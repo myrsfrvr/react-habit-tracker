@@ -52,7 +52,7 @@ export default function App() {
             {showAddHabit ? 'Close' : 'Add new habit'}
           </button>
         </div>
-        <TrackHabitsList />
+        <TrackHabitsList habits={habits} />
       </div>
     </div>
   );

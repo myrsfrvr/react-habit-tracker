@@ -1,11 +1,11 @@
 import TrackHabit from './TrackHabit';
 
-export default function TrackHabitsList() {
+export default function TrackHabitsList({ habits }) {
   return (
     <div className="track-list">
-      <TrackHabit />
-      <TrackHabit />
-      <TrackHabit />
+      {habits.map(habit => (
+        <TrackHabit habit={habit} key={habit.id} />
+      ))}
     </div>
   );
 }
