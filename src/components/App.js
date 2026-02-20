@@ -9,19 +9,19 @@ const initialHabits = [
     id: 5678,
     title: 'early bird',
     description: 'wake up at 6 a.m.',
-    checkList: ['check', 'x', 'check', 'x', 'empty', 'empty', 'empty'],
+    checkList: ['check', 'empty', 'check', 'empty', 'empty', 'empty', 'empty'],
   },
   {
     id: 2345,
     title: "runner's feet",
     description: 'run for at least 20 min',
-    checkList: ['x', 'x', 'check', 'x', 'empty', 'empty', 'empty'],
+    checkList: ['empty', 'empty', 'check', 'empty', 'empty', 'empty', 'empty'],
   },
   {
     id: 8943,
     title: 'world lover',
     description: 'practice new language',
-    checkList: ['x', 'check', 'check', 'check', 'empty', 'empty', 'empty'],
+    checkList: ['empty', 'check', 'check', 'check', 'empty', 'empty', 'empty'],
   },
 ];
 
@@ -38,6 +38,23 @@ export default function App() {
     setShowAddHabit(false);
   }
 
+  function handleToggleHabit(id, dayIndex) {
+    setHabits(habits =>
+      habits.map(habit => {
+        if (habit.id !== id) return habit;
+
+        let newCheckList = [...habit.checkList];
+
+        newCheckList[dayIndex] =
+          newCheckList[dayIndex] === 'check' ? 'empty' : 'check';
+        return {
+          ...habit,
+          checkList: newCheckList,
+        };
+      }),
+    );
+  }
+
   return (
     <div className="container">
       <Logo />
@@ -52,7 +69,7 @@ export default function App() {
             {showAddHabit ? 'Close' : 'Add new habit'}
           </button>
         </div>
-        <TrackHabitsList habits={habits} />
+        <TrackHabitsList habits={habits} onToggleHabit={handleToggleHabit} />
       </div>
     </div>
   );
